@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drag and Drop</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <style>
+    
+  </style>
+  <body>
+    <div class="box">
+      <!-- <div class="imgbox" draggable="true"></div> -->
+      <img class="imgbox" src="https://sm.askmen.com/t/askmen_in/article/f/facebook-p/facebook-profile-picture-affects-chances-of-gettin_fr3n.1200.jpg" alt="">
+      <img class="imgbox" src="https://sm.askmen.com/t/askmen_in/article/f/facebook-p/facebook-profile-picture-affects-chances-of-gettin_fr3n.1200.jpg" alt="">
+    
+      <img class="imgbox" src="https://sm.askmen.com/t/askmen_in/article/f/facebook-p/facebook-profile-picture-affects-chances-of-gettin_fr3n.1200.jpg" alt="">
+    
+    
+    </div>
+    <div class="box"></div>
+    <!-- <div class="box"></div>
+    <div class="box"></div> -->
+
+    <script>
+      const imgBox = document.querySelectorAll(".imgbox");
+      const boxes = document.getElementsByClassName("box");
+
+      // imgBox.addEventListener("dragstart", (e) => {
+      //   console.log("dragStart");
+      //   e.target.className += " borderHold";
+ 
+      //   setTimeout(()=>{
+      //       e.target.className = "hide"
+      //   },0)
+      // });
+
+      // imgBox.addEventListener("dragend", (e) => {
+      //   console.log("dragEnd");
+      //   e.target.className = "imgbox";
+      // });
+
+
+
+      imgBox.forEach((data) => {
+  data.addEventListener("dragstart", (e) => {
+    console.log("dragStart");
+
+    
+    // e.preventDefault();
+
+    // Add a class to the target element
+    e.target.className += " borderHold";
+
+  
+    setTimeout(() => {
+      e.target.className = " hide"
+    }, 0);
+  });
+});
+
+imgBox.forEach((data) => {
+  data.addEventListener("dragend", (e) => {
+    console.log("dragEnd");
+
+   
+    // e.preventDefault();
+
+    // Add a class to the target element
+    e.target.className = "imgbox";
+
+
+   
+  });
+});
+
+
+      for (box of boxes) {
+        box.addEventListener("dragover", (e) => {
+          e.preventDefault();
+          console.log("dragOver");
+        });
+        box.addEventListener("dragenter", (e) => {
+          console.log("dragEnter");
+          e.target.className += " dash";
+        });
+        box.addEventListener("dragleave", (e) => {
+          console.log("dragLeave");
+          // e.target.className = "box";
+        });
+        box.addEventListener("drop", (e) => {
+          console.log("dragDrop");
+
+          e.target.append(imgBox);
+        });
+      }
+
+
+
+
+
+
+
+   
+    </script>
+  </body>
+</html>
+
+
+
+
