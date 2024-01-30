@@ -1,33 +1,37 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-
 .imgbox {
-    /* background-image: url("https://sm.askmen.com/t/askmen_in/article/f/facebook-p/facebook-profile-picture-affects-chances-of-gettin_fr3n.1200.jpg"); */
-    height: 200px;
-    width: 200px;
-    background-size: cover;
-    background-position: center;
-    cursor: pointer;
-    display: inline-block;
-  }
-  .box {
-    height: 202px;
-    width: 630px;
-    background-color: gray;
-    margin: 10px;
-    display: inline-block;
-    border: 2px solid black;
-  }
-  .borderHold {
-    border: 2px solid red;
-  }
-  .hide {
-    display: none;
-  }
-  .dash {
-    border: 3px dashed antiquewhite;
-  }
+  height: 200px;
+  width: 200px;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  display: inline-block;
+  box-shadow: 2px 2px 10px #2e2e2e;
+  margin: 5px;
+}
+
+.box {
+  height: 210px;
+  width: 852px;
+  background-color: #80808047;
+  margin: 10px;
+  display: inline-block;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.628);
+}
+
+.borderHold {
+  border: 2px solid red;
+}
+
+.hide {
+  display: none;
+}
+
+.dash {
+  border: 3px dashed rgb(177, 114, 32);
+}
